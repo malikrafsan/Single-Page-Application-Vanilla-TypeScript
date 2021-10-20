@@ -1,3 +1,114 @@
-.header {
-  color: purple;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#body-page {
+  /* background: linear-gradient(180deg, rgba(247, 161, 162, 0.55) 0%, #9E85EC 76.04%, #6CADFD 99.99%); */
+  background-color: rgba(247, 161, 162, 0.55);
+}
+.search-box {
+  background-color: #FFF;
+  width: 50vw;
+  min-width: 250px;
+  height: 50px;
+  margin: 10px 20px;
+  padding: 0 5px 0 20px;
+  border-radius: 25px;
+  box-shadow: 5px 6px 5px hsl(0, 0%, 60%);
+  display: flex;
+}
+.search-bar {
+  background-color: #FFF;
+  display: inline-block;
+  height: 90%;
+  width: 95%;
+  margin: 2px 0;
+  border: none;
+  outline: none;
+}
+.icon-container {
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-icon {
+  display: inline-block;
+  margin: 0 auto;
+}
+.card-container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+/* .card {
+  padding: 20px 0;
+  margin: 15px;
+  width: 280px;
+  background-color: #FFF;
+  border-radius: 5px;
+} */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-size: cover;
+  background-color: #EEEBE5;
+
+  box-shadow: 0 2px 17px rgb(0 0 0 / 20%);
+  transition: opacity 0.4s ease-in-out, box-shadow 0.4s ease-in-out,
+      -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out,
+      box-shadow 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out,
+      box-shadow 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  margin: 25px;
+  width: 250px;
+  border-radius: 4vw;
+  cursor: pointer;
+  max-height: 450px;
+}
+.card-inside {
+  padding: 35px 10px;
+  transition: 0.4s ease-in-out;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #363EA0, #3278D8, #59BFD7);
+  /* filter: blur(15px); */
+  border-radius: 4vw;
+  z-index: -1;
+  transform: rotate(-7deg);
+  transition: 0.4s ease-in-out;
+}
+.card:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+.card-inside:hover {
+  transform: rotate(-5deg);
+}
+.card h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+}
+.card .info-container {
+  padding: 15px;
+}
+.card .sub-title {
+  font-weight: bold;
+  font-style: italic;
 }

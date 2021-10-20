@@ -1,5 +1,6 @@
 import { MovieData } from '../interfaces/MovieData.js';
 import { CardContainer } from "../components/CardContainer.js";
+import { Filter } from '../components/Filter.js';
 
 export class Renderer {
   constructor(private app: HTMLDivElement) {}
@@ -10,6 +11,8 @@ export class Renderer {
   }
   renderHome(data: MovieData[]) {
     this.setAllRendererNull();
+    const filter = new Filter(this.app);
+    filter.render();
     const cardContainer = new CardContainer(this.app);
     cardContainer.render(data);
   }
@@ -25,6 +28,8 @@ export class Renderer {
 
     if (currentPath === '') {
       this.renderHome(data);
+      // console.log("rendering home page...");
+      // console.log(data);
     } else if (currentPath.substring(0,7) === 'details') {
       this.renderDetailMovie(currentPath[currentPath.length-1]);
     } else {
