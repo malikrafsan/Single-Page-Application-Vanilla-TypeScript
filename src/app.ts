@@ -18,7 +18,7 @@ navbar.render();
 const body = document.querySelector('#body-page') as HTMLDivElement;
 const module = new Renderer(body);
 const data = getData();
-const filteredData = data.then(data => filterData(data));
+const filteredData = data.then(data => filterData(data, ''));
 filteredData.then(data => module.renderOnPageLoadUrlChange(data));
 
 const footerSelector = document.querySelector('#footer') as HTMLDivElement;
