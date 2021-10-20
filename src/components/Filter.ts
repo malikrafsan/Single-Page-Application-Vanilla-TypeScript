@@ -12,15 +12,15 @@ export class Filter {
   render() {
     const h1 = document.createElement('h1');
     h1.classList.add('home-title');
-    h1.innerText = `Top ${this.countMovie} Underrated Film`;
+    h1.innerText = `Top ${this.countMovie} Underrated Movies`;
     this.container.append(h1);
 
     const div1 = document.createElement("div");
-    div1.classList.add('search-box', 'animate-right');
+    div1.classList.add('search-box');
 
     const input = document.createElement("input");
     input.classList.add("search-bar");
-    input.placeholder = "Ketik nama film di sini";
+    input.placeholder = "Type movie title here";
     div1.append(input);
 
     const div2 = document.createElement("div");

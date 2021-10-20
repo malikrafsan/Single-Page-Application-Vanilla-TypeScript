@@ -152,6 +152,7 @@ body {
 }
 .card-container .card:hover {
   transform: rotate(5deg) scale(1.1);
+  color: white;
 }
 .card-container .card-inside:hover {
   transform: rotate(-5deg);
@@ -212,6 +213,8 @@ body {
 .movie-detail img {
   width: 100%;
   border-radius: 15px;
+  border-bottom: 8px solid #7353d6;
+  border-right: 8px solid #7353d6;
 }
 
 .movie-detail .info-container {
