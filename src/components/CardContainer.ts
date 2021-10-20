@@ -7,8 +7,10 @@ export class CardContainer {
   ){}
 
   render(items: MovieData[]){
+    // console.log("ITEMS");
+    // console.log(items);
     const cardContainer = document.createElement('div');
-    cardContainer.classList.add("card-container");
+    cardContainer.classList.add("card-container", 'animate-bottom');
     items.forEach(item => {
       let card = new Card(item);
       const div = card.createCard();

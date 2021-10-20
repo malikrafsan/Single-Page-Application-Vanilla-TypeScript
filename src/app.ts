@@ -4,11 +4,20 @@ import { Footer } from './components/Footer.js';
 import { getData, filterData } from './plugin/utils.js';
 
 window.addEventListener('popstate', () => {
-  filteredData.then(data => module.renderOnPageLoadUrlChange(data));
+  module.renderOnPageLoadUrlChange();
 })
 
 window.onload = () => {
-  filteredData.then(data => module.renderOnPageLoadUrlChange(data));
+  module.renderOnPageLoadUrlChange();
+}
+
+const modal = document.getElementById("about-modal") as HTMLDivElement;
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 const navbarSelector = document.querySelector('#navbar') as HTMLDivElement;
@@ -16,10 +25,12 @@ const navbar = new Navbar(navbarSelector);
 navbar.render();
 
 const body = document.querySelector('#body-page') as HTMLDivElement;
-const module = new Renderer(body);
 const data = getData();
+const module = new Renderer(body, data);
+
 const filteredData = data.then(data => filterData(data, ''));
-filteredData.then(data => module.renderOnPageLoadUrlChange(data));
+filteredData.then(data => module.renderOnPageLoadUrlChange());
+// module.renderOnPageLoadUrlChange();
 
 const footerSelector = document.querySelector('#footer') as HTMLDivElement;
 const footer = new Footer(footerSelector);

@@ -2,24 +2,25 @@
 // import { inputSearch } from "../app.js";
 
 export class Filter {
+  private countMovie: number = 15;
+
   constructor(
     private container: HTMLDivElement,
     public value: string = ''
   ) {}
 
   render() {
+    const h1 = document.createElement('h1');
+    h1.classList.add('home-title');
+    h1.innerText = `Top ${this.countMovie} Underrated Film`;
+    this.container.append(h1);
+
     const div1 = document.createElement("div");
-    div1.classList.add("search-box");
-    
+    div1.classList.add('search-box', 'animate-right');
+
     const input = document.createElement("input");
     input.classList.add("search-bar");
     input.placeholder = "Ketik nama film di sini";
-    input.onkeyup = () => {
-      this.value = input.value;
-      // console.log(this.value);
-      // input.value = this.value;
-      // console.log(this.value);
-    }
     div1.append(input);
 
     const div2 = document.createElement("div");
