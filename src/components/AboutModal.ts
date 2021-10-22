@@ -19,7 +19,7 @@ export class AboutModal {
     i.classList.add('fa', 'fa-times-circle');
     span.append(i);
     span.onclick = function() {
-      console.log("mabar");
+      // console.log("mabar");
       modalContainer.style.display = "none";
     }
     div.append(span);
@@ -29,7 +29,7 @@ export class AboutModal {
     div.append(p);
 
     this.button.onclick = function() {
-      console.log("mobir");
+      // console.log("mobir");
       modalContainer.style.display = "block";
     }
     modalContainer.append(div);

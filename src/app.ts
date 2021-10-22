@@ -8,7 +8,8 @@ window.addEventListener('popstate', () => {
 })
 
 window.onload = () => {
-  module.renderOnPageLoadUrlChange();
+  // module.renderOnPageLoadUrlChange();
+  filteredData.then(data => module.renderOnPageLoadUrlChange());
 }
 
 const modal = document.getElementById("about-modal") as HTMLDivElement;
@@ -29,8 +30,6 @@ const data = getData();
 const module = new Renderer(body, data);
 
 const filteredData = data.then(data => filterData(data, ''));
-filteredData.then(data => module.renderOnPageLoadUrlChange());
-// module.renderOnPageLoadUrlChange();
 
 const footerSelector = document.querySelector('#footer') as HTMLDivElement;
 const footer = new Footer(footerSelector);
