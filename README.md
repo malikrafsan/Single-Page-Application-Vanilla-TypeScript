@@ -15,8 +15,8 @@
 ## Screenshots
 <img src="images/home-desktop.png" alt="Home Page" width="500"/>
 <img src="images/detail-desktop.png" alt="Detail Movie Page" width="500"/>
-<img src="images/home-mobile.png" alt="Home Page Mobile" width="250"/>
-<img src="images/detail-mobile.png" alt="Detail Movie Page Mobile" width="250"/>
+<img src="images/home-mobile.png" alt="Home Page Mobile" width="225"/>
+<img src="images/detail-mobile.png" alt="Detail Movie Page Mobile" width="225"/>
 
 ## Setup
 In order to run this website, you need to install:
@@ -36,6 +36,9 @@ You can run this website by:
    tsc
    ```
 2. Open the `index.html` by using live server or just open it using file explorer
+
+Or you can just access on the [github page](https://malikrafsan.github.io/Single-Page-Application-Vanilla-TypeScript/)
+
 
 ## Acknowledgements
 > This project is developed for Google Developer Student Club (GDSC) Institut Teknologi Bandung (ITB)
